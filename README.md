@@ -33,7 +33,7 @@ getraenkeautomat_arvato/
 ├── src/
 │   ├── main/java/
 │   │   ├── model/          # Drink types, Coin enum
-│   │   ├── service/        # Vending logic, change calculation
+│   │   ├── controller/        # Vending logic, change calculation
 │   │   └── Main.java       # Entry point
 │   └── test/java/          # JUnit tests
 └── README.md
@@ -77,7 +77,7 @@ Change returned: 0.50 € (1x 50ct)
 
 ## What I learned
 
-This project deepened my understanding of object-oriented design in Java — specifically how interfaces and abstract classes enforce clean contracts between components. The change-calculation algorithm required careful thinking about coin denominations and greedy logic, which I validated through targeted JUnit tests.
+This project deepened my understanding of object-oriented design in Java — specifically how interfaces and abstract classes enforce clean contracts between components. The change-calculation algorithm required careful thinking about coin denominations and greedy logic, which I validated through targeted JUnit tests. The project was further developed in the job as training.
 
 ---
 
