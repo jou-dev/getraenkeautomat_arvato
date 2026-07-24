@@ -1,6 +1,6 @@
 # 🥤 Getränkeautomat
 
-A Java-based vending machine simulation built as a technical interview assignment — and the project that landed me a Full-Stack Developer role at Arvato Systems.
+A Java-based vending machine simulation built as a technical interview assignment — and the project that landed me a Software Developer role at Arvato Systems.
 
 ---
 
