@@ -1,49 +1,41 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 public class Getraenkeautomat {
-    private Kasse kasse;
+    private Kasse kassenbestand;
     private Warenbestand warenbestand;
-    private Map<String, Getraenk> getraenkeBestand = new ConcurrentHashMap<String, Getraenk>();
+    private Produkt ausgewaehltesProdukt;
 
-    public Getraenkeautomat(Kasse kasse, Warenbestand warenbestand, Map<String, Getraenk> getraenkeBestand) {
-        this.kasse = kasse;
+    public Getraenkeautomat(Kasse kassenbestand, Warenbestand warenbestand, Produkt ausgewaehltesProdukt) {
+        this.kassenbestand = kassenbestand;
         this.warenbestand = warenbestand;
-        this.getraenkeBestand = getraenkeBestand;
+        this.ausgewaehltesProdukt = ausgewaehltesProdukt;
     }
 
     public Kasse getKasse() {
-        return kasse;
+        return kassenbestand;
     }
 
-    public void setKasse(Kasse kasse) {
-        this.kasse = kasse;
-    }
-
-    public void setGetraenkeBestand(Map<String, Getraenk> getraenkeBestand) {
-        this.getraenkeBestand = getraenkeBestand;
-    }
-
-    public Map<String, Getraenk> getGetraenkeBestand() {
-        return getraenkeBestand;
-    }
-
-    public void setGetraenke(Map<String, Getraenk> getraenke) {
-        this.getraenkeBestand = getraenke;
-    }
-
-    public boolean contains(String getraenkewunsch) {
-        if (getraenkeBestand.containsKey(getraenkewunsch)) {
-            return true;
-        }
-        return false;
+    public void setKasse(Kasse kassenbestand) {
+        this.kassenbestand = kassenbestand;
     }
 
     public boolean kasseIsEmpty() {
-        return kasse.getStand() == 0;
+        return kassenbestand.getStand() == 0;
+    }
+
+    public Warenbestand getWarenbestand() {
+        return warenbestand;
+    }
+
+    public void setWarenbestand(Warenbestand warenbestand) {
+        this.warenbestand = warenbestand;
+    }
+
+    public Produkt getAusgewaehltesProdukt() {
+        return ausgewaehltesProdukt;
+    }
+
+    public void setAusgewaehltesProdukt(Produkt ausgewaehltesProdukt) {
+        this.ausgewaehltesProdukt = ausgewaehltesProdukt;
     }
 }

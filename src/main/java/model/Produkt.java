@@ -1,46 +1,33 @@
-public class Produkt {
-    private String name;
-    private double preis;
-    private int id;
-    private int bestand;
+package model;
 
-    public Produkt(String name, double preis, int id, int bestand) {
+import java.math.BigDecimal;
+
+public class Produkt {
+    private final String name;
+    private final BigDecimal preis;
+    private final int bestand;
+    private final int id;
+
+    public Produkt(String name, BigDecimal preis, int bestand, int id) {
         this.name = name;
         this.preis = preis;
-        this.id = id;
         this.bestand = bestand;
+        this.id = id;
     }
 
-    // Getters and setters
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPreis() {
+    public BigDecimal getPreis() {
         return preis;
-    }
-
-    public void setPreis(double preis) {
-        this.preis = preis;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getBestand() {
         return bestand;
     }
 
-    public void setBestand(int bestand) {
-        this.bestand = bestand;
+    public int getId() {
+        return id;
     }
 }

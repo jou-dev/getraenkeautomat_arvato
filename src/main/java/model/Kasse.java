@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Kasse {
     private int stand;
-    private List<Muenze> muenzen;
+    private List<Coin> muenzen;
 
-    public Kasse(int stand, List<Muenze> muenzen) {
+    public Kasse(int stand, List<Coin> muenzen) {
         this.stand = stand;
         this.muenzen = muenzen;
     }
@@ -15,7 +15,7 @@ public class Kasse {
         return stand;
     }
 
-    public List<Muenze> getMuenzen() {
+    public List<Coin> getMuenzen() {
         return muenzen;
     }
 
@@ -23,7 +23,7 @@ public class Kasse {
         this.stand = stand;
     }
 
-    public void setMuenzen(List<Muenze> muenzen) {
+    public void setMuenzen(List<Coin> muenzen) {
         this.muenzen = muenzen;
     }
 }

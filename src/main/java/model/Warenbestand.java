@@ -1,3 +1,5 @@
+package model;
+
 public class Warenbestand {
     private int menge;
 

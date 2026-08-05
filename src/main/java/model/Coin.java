@@ -1,11 +1,10 @@
 package model;
 
-public enum Muenze {
-    Cent10(10), Cent20(20), Cent50(50), Euro(100), Euro2(200),
-    ;
+public enum Coin {
+    Cent10(10), Cent20(20), Cent50(50), Euro(100), Euro2(200);
     private int value;
 
-    Muenze(int value) {
+    Coin(int value) {
         this.value = value;
     }
 
