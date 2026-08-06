@@ -1,17 +1,23 @@
 package model;
 
+import java.util.Map;
+
 public class Warenbestand {
-    private int menge;
+    private Map<String, Produkt> warenProdukte;
 
-    public Warenbestand(int menge) {
-        this.menge = menge;
+    public Produkt sucheProdukt(String produktMarktBezeichnung) {
+        return null;
     }
 
-    public int getMenge() {
-        return menge;
+    public int fuegeProduktInWarenbestandZu(Produkt produkt) {
+        return 0;
     }
 
-    public void setMenge(int menge) {
-        this.menge = menge;
+    public int entferneProduktVomWarenbestand(Produkt produkt) {
+        return 0;
+    }
+
+    public boolean existiertDiesesProdukt(Produkt produkt) {
+        return false;
     }
 }
