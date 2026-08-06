@@ -15,6 +15,24 @@ public class Getraenkeautomat {
         this.machineState = machineState;
     }
 
+    public void zeigeAktuelleProdukten() {
+    }
+
+    public void waehleProduktaus(String produktBezeichnung) {
+        this.setAusgewaehltesProdukt(this.warenbestand.sucheProduktAus(produktBezeichnung));
+    }
+
+    public void zahleGeldBetragEin(int geldBetragInCents) {
+    }
+
+    public void ausgewaehltesProduktKaufen() {
+
+    }
+
+    public GetraenkUndWechselgeld ausgewaehltesProduktUndWechselgeldRausgeben() {
+        return null;
+    }
+
     public Kasse getKasse() {
         return kassenbestand;
     }

@@ -5,7 +5,7 @@ import java.util.Map;
 public class Warenbestand {
     private Map<String, Produkt> warenProdukte;
 
-    public Produkt sucheProdukt(String produktMarktBezeichnung) {
+    public Produkt sucheProduktAus(String produktMarktBezeichnung) {
         return null;
     }
 
