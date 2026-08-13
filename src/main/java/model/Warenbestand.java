@@ -20,4 +20,8 @@ public class Warenbestand {
     public boolean existiertDiesesProdukt(Produkt produkt) {
         return false;
     }
+
+    public void alleVerfuergbarenProduktenZeigen() {
+
+    }
 }

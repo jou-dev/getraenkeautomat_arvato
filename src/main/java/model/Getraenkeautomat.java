@@ -4,18 +4,15 @@ public class Getraenkeautomat {
     private Kasse kassenbestand;
     private Warenbestand warenbestand;
     private Produkt ausgewaehltesProdukt;
-    private int eingezahlterBetrag;
-    private String machineState;
+    private int aktuellesGuthaben;
+    private String machineState; // IDLE; WAITING_FOR_PAYMENT; READY_TO_DISPENSE; DISPENSING; OUT_OF_SERVICE
 
     public Getraenkeautomat(Kasse kassenbestand, Warenbestand warenbestand, Produkt ausgewaehltesProdukt, int eingezahlterBetrag, String machineState) {
         this.kassenbestand = kassenbestand;
         this.warenbestand = warenbestand;
         this.ausgewaehltesProdukt = ausgewaehltesProdukt;
-        this.eingezahlterBetrag = eingezahlterBetrag;
+        this.aktuellesGuthaben = eingezahlterBetrag;
         this.machineState = machineState;
-    }
-
-    public void zeigeAktuelleProdukten() {
     }
 
     public void waehleProduktaus(String produktBezeichnung) {
@@ -61,12 +58,12 @@ public class Getraenkeautomat {
         this.ausgewaehltesProdukt = ausgewaehltesProdukt;
     }
 
-    public int getEingezahlterBetrag() {
-        return eingezahlterBetrag;
+    public int getAktuellesGuthaben() {
+        return aktuellesGuthaben;
     }
 
-    public void setEingezahlterBetrag(int eingezahlterBetrag) {
-        this.eingezahlterBetrag = eingezahlterBetrag;
+    public void setAktuellesGuthaben(int aktuellesGuthaben) {
+        this.aktuellesGuthaben = aktuellesGuthaben;
     }
 
     public String getMachineState() {
