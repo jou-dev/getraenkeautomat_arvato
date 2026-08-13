@@ -9,11 +9,11 @@ public class Warenbestand {
         return null;
     }
 
-    public int fuegeProduktInWarenbestandZu(Produkt produkt) {
+    private int fuegeProduktInWarenbestandZu(Produkt produkt) {
         return 0;
     }
 
-    public int entferneProduktVomWarenbestand(Produkt produkt) {
+    private int entferneProduktVomWarenbestand(Produkt produkt) {
         return 0;
     }
 
