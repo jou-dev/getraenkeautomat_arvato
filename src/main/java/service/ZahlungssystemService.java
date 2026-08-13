@@ -1,8 +1,6 @@
 package service;
 
-import model.Produkt;
-
-public interface PaymentService {
+public interface ZahlungssystemService {
 
     int aktuellesGuthabenZeigen();
 
@@ -10,7 +8,7 @@ public interface PaymentService {
 
     int berechneNotwendigesGuthabenFuerDenKauf();
 
-    int einzahlungZurueckgeben();
+    int einzahlungRueckerstatten();
 
     int berechneWechselgeld();
 
