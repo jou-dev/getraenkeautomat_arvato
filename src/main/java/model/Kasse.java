@@ -2,11 +2,11 @@ package model;
 
 import java.util.List;
 
-public class MuenzenKasse {
+public class Kasse {
     private int stand;
-    private List<Muenze> muenzen;
+    private List<Coin> muenzen;
 
-    public MuenzenKasse(int stand, List<Muenze> muenzen) {
+    public Kasse(int stand, List<Coin> muenzen) {
         this.stand = stand;
         this.muenzen = muenzen;
     }
@@ -15,7 +15,7 @@ public class MuenzenKasse {
         return stand;
     }
 
-    public List<Muenze> getMuenzen() {
+    public List<Coin> getMuenzen() {
         return muenzen;
     }
 
@@ -23,7 +23,7 @@ public class MuenzenKasse {
         this.stand = stand;
     }
 
-    public void setMuenzen(List<Muenze> muenzen) {
+    public void setMuenzen(List<Coin> muenzen) {
         this.muenzen = muenzen;
     }
 }

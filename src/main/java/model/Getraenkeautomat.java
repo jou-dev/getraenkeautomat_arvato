@@ -1,64 +1,76 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 public class Getraenkeautomat {
-    private MuenzenKasse muenzenKasse;
-    private String standort;
-    private Map<String, String> faecher = new ConcurrentHashMap<String, String>();
+    private Kasse kassenbestand;
+    private Warenbestand warenbestand;
+    private Produkt ausgewaehltesProdukt;
+    private int aktuellesGuthaben;
+    private String machineState; // IDLE; WAITING_FOR_PAYMENT; READY_TO_DISPENSE; DISPENSING; OUT_OF_SERVICE
 
-    public Getraenkeautomat(MuenzenKasse muenzenKasse, String standort, Map<String, String> faecher) {
-        this.muenzenKasse = muenzenKasse;
-        this.standort = standort;
-        this.faecher = faecher;
+    public Getraenkeautomat(Kasse kassenbestand, Warenbestand warenbestand, Produkt ausgewaehltesProdukt, int eingezahlterBetrag, String machineState) {
+        this.kassenbestand = kassenbestand;
+        this.warenbestand = warenbestand;
+        this.ausgewaehltesProdukt = ausgewaehltesProdukt;
+        this.aktuellesGuthaben = eingezahlterBetrag;
+        this.machineState = machineState;
     }
 
-    public MuenzenKasse getMuenzenKasse() {
-        return muenzenKasse;
+    public void waehleProduktaus(String produktBezeichnung) {
+        this.setAusgewaehltesProdukt(this.warenbestand.sucheProduktAus(produktBezeichnung));
     }
 
-    public void setMuenzenKasse(MuenzenKasse muenzenKasse) {
-        this.muenzenKasse = muenzenKasse;
+    public void zahleGeldBetragEin(int geldBetragInCents) {
     }
 
-    public void setFaecher(Map<String, String> faecher) {
-        this.faecher = faecher;
+    public void ausgewaehltesProduktKaufen() {
+
     }
 
-    public Map<String, String> getFaecher() {
-        return faecher;
+    public GetraenkUndWechselgeld ausgewaehltesProduktUndWechselgeldRausgeben() {
+        return null;
     }
 
-    public Map<String, String> getGetraenks() {
-        return faecher;
+    public Kasse getKasse() {
+        return kassenbestand;
     }
 
-    public void setGetraenks(Map<String, String> getraenks) {
-        this.faecher = getraenks;
+    public void setKasse(Kasse kassenbestand) {
+        this.kassenbestand = kassenbestand;
     }
 
-    public String getStandort() {
-        return standort;
+    public boolean kasseIsEmpty() {
+        return kassenbestand.getStand() == 0;
     }
 
-    public void setStandort(String standort) {
-        this.standort = standort;
+    public Warenbestand getWarenbestand() {
+        return warenbestand;
     }
 
-    public boolean contains(String getraenkewunsch) {
-        if (faecher.containsKey(getraenkewunsch)) {
-            return true;
-        }
-        return false;
+    public void setWarenbestand(Warenbestand warenbestand) {
+        this.warenbestand = warenbestand;
     }
 
-    public boolean muezenKasseIsEmpty() {
-        if (muenzenKasse.getStand() == 0) {
-            return true;
-        }
-        return false;
+    public Produkt getAusgewaehltesProdukt() {
+        return ausgewaehltesProdukt;
+    }
+
+    public void setAusgewaehltesProdukt(Produkt ausgewaehltesProdukt) {
+        this.ausgewaehltesProdukt = ausgewaehltesProdukt;
+    }
+
+    public int getAktuellesGuthaben() {
+        return aktuellesGuthaben;
+    }
+
+    public void setAktuellesGuthaben(int aktuellesGuthaben) {
+        this.aktuellesGuthaben = aktuellesGuthaben;
+    }
+
+    public String getMachineState() {
+        return machineState;
+    }
+
+    public void setMachineState(String machineState) {
+        this.machineState = machineState;
     }
 }
