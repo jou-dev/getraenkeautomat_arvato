@@ -33,7 +33,7 @@ getraenkeautomat_arvato/
 ├── src/
 │   ├── main/java/
 │   │   ├── model/          # Drink types, Coin enum
-│   │   ├── controller/        # Vending logic, change calculation
+│   │   ├── service/        # Vending logic, change calculation
 │   │   └── Main.java       # Entry point
 │   └── test/java/          # JUnit tests
 └── README.md
