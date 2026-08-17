@@ -30,8 +30,16 @@ Die folgenden Eigenschaften besitzt eine Kundenbedienung Sitzung:
 
 ## Collaboration
 
+### Service Struktur
+
+```
 KundenBedienungService
-   |
-   |_____ KundenbedienungSitzung
-   |_____ Warenbestand
-   |_____ Zahlungssystem
+│
+├── KundenbedienungSitzung
+│
+├── Warenbestand
+│   
+└── Zahlungssystem
+```
+
+---
